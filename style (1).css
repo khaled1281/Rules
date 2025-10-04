@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --dark-brown: #8B6F47;
+  --medium-brown: #A0826D;
+  --light-brown: #C9B697;
+  --cream: #F5F1E8;
+  --white: #FFFFFF;
+  --gold: #D4A574;
+  --text-dark: #4A3C28;
+  --border-color: #E0D5C7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  min-height: 100vh;
+  line-height: 1.8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Header */
+.header {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 60px 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+}
+
+.logo {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 30px;
+  display: block;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+}
+
+.server-title {
+  font-family: 'Cairo', sans-serif;
+  font-size: 3em;
+  font-weight: 800;
+  color: var(--dark-brown);
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.server-subtitle {
+  font-family: 'Cairo', sans-serif;
+  font-size: 1.5em;
+  color: var(--medium-brown);
+  font-weight: 500;
+}
+
+/* Description Section */
+.description {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 50px 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+}
+
+.description h2 {
+  font-family: 'Cairo', sans-serif;
+  font-size: 2.5em;
+  color: var(--dark-brown);
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.description p {
+  font-size: 1.4em;
+  line-height: 2;
+  color: var(--text-dark);
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Discord Button */
+.discord-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 50px;
+  font-size: 1.3em;
+  font-weight: 700;
+  background: var(--dark-brown);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.discord-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: var(--medium-brown);
+}
+
+.discord-button i {
+  font-size: 1.5em;
+}
+
+/* Rules Container */
+.rules-container {
+  margin-bottom: 40px;
+}
+
+/* Rule Section */
+.rule-section {
+  background: var(--white);
+  border-radius: 20px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+}
+
+.rule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 35px;
+  background: var(--white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.rule-header:hover {
+  background: var(--cream);
+}
+
+.rule-header h3 {
+  font-family: 'Cairo', sans-serif;
+  font-size: 1.8em;
+  color: var(--dark-brown);
+  font-weight: 700;
+}
+
+.arrow {
+  font-size: 1.4em;
+  color: var(--dark-brown);
+  transition: transform 0.3s ease;
+}
+
+.rule-header.active .arrow {
+  transform: rotate(180deg);
+}
+
+.rule-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background: var(--white);
+}
+
+.rule-content.active {
+  max-height: 8000px;
+  padding: 30px;
+}
+
+/* Rule Item - التصميم الجديد حسب الصورة */
+.rule-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding: 25px;
+  background: var(--cream);
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  align-items: flex-start;
+}
+
+.rule-item:hover {
+  background: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.rule-number {
+  min-width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark-brown);
+  color: var(--white);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.4em;
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  font-family: 'Cairo', sans-serif;
+}
+
+.rule-item p {
+  line-height: 2;
+  font-size: 1.15em;
+  color: var(--text-dark);
+  font-weight: 400;
+  text-align: right;
+  flex: 1;
+}
+
+/* Warning Box - التصميم الجديد حسب الصورة */
+.warning {
+  background: linear-gradient(135deg, #FFF9E6 0%, #FFEAA7 100%);
+  border-radius: 15px;
+  padding: 35px;
+  margin-top: 30px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--gold);
+}
+
+.warning p {
+  color: var(--text-dark);
+  font-size: 1.3em;
+  line-height: 2;
+  font-weight: 700;
+}
+
+/* Language Grid */
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.language-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  background: var(--cream);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.language-item:hover {
+  background: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.language-item .term {
+  font-weight: 700;
+  color: var(--dark-brown);
+  font-size: 1.2em;
+  font-family: 'Cairo', sans-serif;
+}
+
+.language-item .meaning {
+  color: var(--text-dark);
+  font-size: 1.15em;
+  font-weight: 400;
+}
+
+/* Safe Zones Grid */
+.safe-zone-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.safe-zone-item {
+  padding: 25px;
+  background: var(--cream);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.15em;
+  color: var(--text-dark);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.safe-zone-item:hover {
+  background: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Footer */
+.footer {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+}
+
+.footer p {
+  font-family: 'Cairo', sans-serif;
+  font-size: 1.3em;
+  color: var(--dark-brown);
+  font-weight: 500;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-brown);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--medium-brown);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .server-title {
+    font-size: 2.2em;
+  }
+
+  .description h2 {
+    font-size: 2em;
+  }
+
+  .description p {
+    font-size: 1.2em;
+  }
+
+  .rule-header h3 {
+    font-size: 1.4em;
+  }
+
+  .language-grid,
+  .safe-zone-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    padding: 40px 25px;
+  }
+
+  .logo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .rule-item {
+    padding: 20px;
+  }
+
+  .rule-number {
+    min-width: 45px;
+    height: 45px;
+    font-size: 1.2em;
+  }
+}
